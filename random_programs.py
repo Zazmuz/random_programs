@@ -1,7 +1,7 @@
 import time
 
-#                       God----------------------------------------------------------------------------------
-
+#                       God---------------------------------------------------------------------------------------
+#
 # try_out = ["In the beginning", "God created the heavens and the earth"]
 # timed_try = 0
 # holy_number = 3-0.333-0.333-0.333-0.333-0.333
@@ -18,7 +18,7 @@ import time
 #     if repeat == 3:
 #         while True:
 #             print("Kneel before your king!")
-
+#
 
 
 
@@ -49,50 +49,79 @@ import time
 
 
 
+#                       Fibonacci--------------------------------------------------------------------------------
 
 
 
 
+# def fibonacci_finder(repeats):
+#     fibonacci_sequence = None
+#     fibonacci_number_1 = 0
+#     fibonacci_number_2 = 1
+#     skipper = 0
+#     for i in range(repeats):
+#         if skipper == 1:
+#             fibonacci_sequence = fibonacci_number_1 + fibonacci_number_2
+#             fibonacci_number_2 = fibonacci_number_1
+#             fibonacci_number_1 = fibonacci_sequence
+#         else:
+#             skipper = 1
+#             fibonacci_sequence = 0
+#     print("The " + str(repeats) + "th number of the fibonacci seuence is: " + str(fibonacci_sequence))
+#
+#
+# def fibonacci_checker(number):
+#     fibonacci_sequence = None
+#     fibonacci_number_1 = 0
+#     fibonacci_number_2 = 1
+#     no_overly_large_numbers_are_ok = 0
+#     skipper = 0
+#     while True:
+#         if skipper == 1:
+#             fibonacci_sequence = fibonacci_number_1 + fibonacci_number_2
+#             fibonacci_number_2 = fibonacci_number_1
+#             fibonacci_number_1 = fibonacci_sequence
+#             if fibonacci_sequence == number:
+#                 print("Your number is a fibonacci number!")
+#                 break
+#             if no_overly_large_numbers_are_ok > 5000:
+#                 print("Your number is not a fibonocci numbers! :(")
+#                 break
+#             no_overly_large_numbers_are_ok += 1
+#         else:
+#             skipper = 1
+#             fibonacci_sequence = 0
+# fibonacci_checker(int(input()))
 
-def fibonacci_finder(repeats):
-    fibonacci_sequence = None
-    fibonacci_number_1 = 0
-    fibonacci_number_2 = 1
-    skipper = 0
-    for i in range(repeats):
-        if skipper == 1:
-            fibonacci_sequence = fibonacci_number_1 + fibonacci_number_2
-            fibonacci_number_2 = fibonacci_number_1
-            fibonacci_number_1 = fibonacci_sequence
-        else:
-            skipper = 1
-            fibonacci_sequence = 0
-    print("The " + str(repeats) + "th number of the fibonacci seuence is: " + str(fibonacci_sequence))
+#                       Calculator----------------------------------------------------------------------------
+number_one = None
+number_two = None
+method = None
+answer = None
+def plus(number_one, number_two):
+    answer = number_one + number_two
+    return answer
+def minus(number_one, number_two):
+    answer = number_one - number_two
+    return answer
+def division(number_one, number_two):
+    answer = number_one / number_two
+    return answer
+def multiplication(number_one, number_two):
+    answer = number_one * number_two
+    return answer
+number_one = int(input("What is your first number?: "))
+number_two = int(input("What is your second number?: "))
+method = input("Choose a calculation method: + - * /: ")
 
-
-def fibonacci_checker(number):
-    fibonacci_sequence = None
-    fibonacci_number_1 = 0
-    fibonacci_number_2 = 1
-    no_overly_large_numbers_are_ok = 0
-    skipper = 0
-    while True:
-        if skipper == 1:
-            fibonacci_sequence = fibonacci_number_1 + fibonacci_number_2
-            fibonacci_number_2 = fibonacci_number_1
-            fibonacci_number_1 = fibonacci_sequence
-            if fibonacci_sequence == number:
-                print("Your number is a fibonacci number!")
-                break
-            if no_overly_large_numbers_are_ok > 5000:
-                print("Your number is not a fibonocci numbers! :(")
-                break
-            no_overly_large_numbers_are_ok += 1
-        else:
-            skipper = 1
-            fibonacci_sequence = 0
-fibonacci_checker(int(input()))
-
+if method == "+":
+    print(plus(number_one, number_two))
+if method == "-":
+    print(minus(number_one, number_two))
+if method == "/":
+    print(division(number_one, number_two))
+if method == "*":
+    print(multiplication(number_one, number_two))
 
 
 
